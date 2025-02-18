@@ -1,6 +1,6 @@
 // Register.jsx
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   return (
@@ -8,11 +8,12 @@ const Register = () => {
       {/* Left Side: White Background + Sign-up Form */}
       <div className="w-full md:w-1/2 bg-white flex flex-col justify-center px-8 py-8">
         {/* Logo */}
-        
 
         {/* Heading */}
         <h2 className="text-2xl font-bold text-center mb-2">Sign up</h2>
-        <p className="text-center text-gray-600 mb-6">Create New PangeaPay Account</p>
+        <p className="text-center text-gray-600 mb-6">
+          Create New PangeaPay Account
+        </p>
 
         {/* Registration Form */}
         <form>
@@ -47,20 +48,20 @@ const Register = () => {
 
           {/* Terms Checkbox */}
           <div className="mb-6 flex items-center">
-            <input
-              type="checkbox"
-              id="term-condition"
-              className="mr-2"
-            />
+            <input type="checkbox" id="term-condition" className="mr-2" />
             <label htmlFor="term-condition" className="text-gray-700 text-sm">
-              I agree to TokenWiz’s{' '}
-              <Link to="/privacy-policy" className="text-blue-600 hover:underline">
+              I agree to TokenWiz’s{" "}
+              <Link
+                to="/privacy-policy"
+                className="text-blue-600 hover:underline"
+              >
                 Privacy Policy
-              </Link>{' '}
-              &amp;{' '}
+              </Link>{" "}
+              &amp;{" "}
               <Link to="/terms" className="text-blue-600 hover:underline">
                 Terms
-              </Link>.
+              </Link>
+              .
             </label>
           </div>
 
@@ -92,9 +93,9 @@ const Register = () => {
 
         {/* Already have an account? */}
         <div className="mt-6 text-center text-sm text-gray-600">
-          Already have an account?{' '}
+          Already have an account?{" "}
           <Link to="/" className="text-blue-600 hover:underline font-semibold">
-            log in instead
+            Log In Instead
           </Link>
         </div>
 
@@ -111,7 +112,7 @@ const Register = () => {
                 Terms
               </Link>
             </li>
-            <li>© 2018 PangeaPay.</li>
+            <li>© 2024 PangeaPay.</li>
           </ul>
         </div>
       </div>
@@ -119,11 +120,7 @@ const Register = () => {
       {/* Right Side: Blue Background + Illustration */}
       <div className="hidden md:flex md:w-1/2 bg-blue-900 items-center justify-center">
         {/* Replace /imm.jpeg with your actual illustration image */}
-        <img
-          src="/immmm.png"
-          alt="Illustration"
-          className="max-w-md h-auto"
-        />
+        <img src="/immmm.png" alt="Illustration" className="max-w-md h-auto" />
       </div>
     </div>
   );

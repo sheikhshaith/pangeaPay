@@ -1,6 +1,6 @@
 // Login.jsx
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -8,11 +8,12 @@ const Login = () => {
       {/* Left Panel: Login Form */}
       <div className="w-full lg:w-1/2 bg-white flex flex-col justify-center p-8">
         {/* Logo */}
-    
 
         {/* Heading */}
-        <h2 className="text-2xl font-bold text-center mb-2">Log in</h2>
-        <p className="text-center text-gray-600 mb-6">with your PangeaPay Account</p>
+        <h2 className="text-2xl font-bold text-center mb-2">Log In</h2>
+        <p className="text-center text-gray-600 mb-6">
+          With Your PangeaPay Account
+        </p>
 
         {/* Login Form */}
         <form>
@@ -33,24 +34,24 @@ const Login = () => {
 
           <div className="mb-4 flex justify-between items-center">
             <label className="flex items-center text-gray-700 text-sm">
-              <input
-                type="checkbox"
-                className="mr-2"
-              />
+              <input type="checkbox" className="mr-2" />
               Remember Me
             </label>
-            <Link to="/forgot" className="text-blue-600 hover:underline text-sm">
-              Forgot password?
+            <Link
+              to="/forgot"
+              className="text-blue-600 hover:underline text-sm"
+            >
+              Forgot Password?
             </Link>
           </div>
 
           <Link to="/home" className="text-blue-600 hover:underline text-sm">
-          <button
-            type="submit"
-            className="w-full py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
-          >
-            Log In
-          </button>
+            <button
+              type="submit"
+              className="w-full py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+            >
+              Log In
+            </button>
           </Link>
         </form>
 
@@ -73,9 +74,12 @@ const Login = () => {
 
         {/* Sign Up Link */}
         <div className="mt-6 text-center text-sm text-gray-600">
-          Don’t have an account?{' '}
-          <Link to="/register" className="text-blue-600 hover:underline font-semibold">
-            sign in here
+          Don’t have an account?{" "}
+          <Link
+            to="/register"
+            className="text-blue-600 hover:underline font-semibold"
+          >
+            Sign Up Here
           </Link>
         </div>
 
@@ -92,7 +96,7 @@ const Login = () => {
                 Terms
               </Link>
             </li>
-            <li>© 2018 PangeaPay.</li>
+            <li>© 2024 PangeaPay.</li>
           </ul>
         </div>
       </div>
@@ -100,11 +104,7 @@ const Login = () => {
       {/* Right Panel: Blue Background + Illustration */}
       <div className="hidden lg:flex lg:w-1/2 items-center justify-center bg-blue-900">
         {/* Replace /imm.jpeg with your actual illustration image */}
-        <img
-          src="/immmm.png"
-          alt="Illustration"
-          className="max-w-md h-auto"
-        />
+        <img src="/immmm.png" alt="Illustration" className="max-w-md h-auto" />
       </div>
     </div>
   );
