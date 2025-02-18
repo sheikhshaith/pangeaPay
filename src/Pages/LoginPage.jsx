@@ -11,7 +11,7 @@ const Login = () => {
     
 
         {/* Heading */}
-        <h2 className="text-2xl font-bold text-center mb-2">Sign in</h2>
+        <h2 className="text-2xl font-bold text-center mb-2">log in</h2>
         <p className="text-center text-gray-600 mb-6">with your TokenWiz Account</p>
 
         {/* Login Form */}
@@ -49,7 +49,7 @@ const Login = () => {
             type="submit"
             className="w-full py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
           >
-            Sign In
+            log In
           </button>
           </Link>
         </form>
@@ -75,7 +75,7 @@ const Login = () => {
         <div className="mt-6 text-center text-sm text-gray-600">
           Don’t have an account?{' '}
           <Link to="/register" className="text-blue-600 hover:underline font-semibold">
-            Sign up here
+            sign in here
           </Link>
         </div>
 
