@@ -1,12 +1,16 @@
+// Navbar.jsx
 import React, { useState } from 'react';
 import { UserCircle, LogOut } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
+  const navigate = useNavigate();
 
   const handleLogout = () => {
-    // Add your logout logic here
+    // Add your logout logic here (e.g., clearing tokens, resetting state, etc.)
     console.log('Logging out...');
+    navigate('/'); // Navigate to root ("/") after logout
   };
 
   return (
