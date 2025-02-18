@@ -44,12 +44,14 @@ const Login = () => {
             </Link>
           </div>
 
+          <Link to="/home" className="text-blue-600 hover:underline text-sm">
           <button
             type="submit"
             className="w-full py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
           >
             Sign In
           </button>
+          </Link>
         </form>
 
         {/* Or Sign In With */}
