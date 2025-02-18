@@ -1,6 +1,10 @@
-// App.jsx
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Login from "./Pages/LoginPage"; // Adjusted to match the actual file name
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import Login from "./Pages/LoginPage";
 import RegisterPage from "./Pages/Register";
 import Home from "./Pages/Home";
 import KycRegister from "./Pages/kycRegister";
