@@ -1,118 +1,110 @@
-// import React, { useState } from "react";
-// import axios from "axios";
-// import { useNavigate } from "react-router-dom";
-// import "./styles.css"; // Import custom styles
+// Login.jsx
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-// export default function LoginPage() {
-//   const [email, setEmail] = useState("");
-//   const [password, setPassword] = useState("");
-//   const [error, setError] = useState("");
-//   const [loading, setLoading] = useState(false);
-//   const navigate = useNavigate();
+const Login = () => {
+  return (
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4">
+      {/* Main Container */}
+      <div className="w-full max-w-4xl bg-white shadow-md rounded overflow-hidden flex flex-col lg:flex-row">
+        {/* Left Side - Login Form */}
+        <div className="w-full lg:w-1/2 p-8">
+          {/* Logo */}
+          <div className="mb-8 text-center">
+            <Link to="/" className="inline-block">
+              <img src="/images/logo.png" alt="TokenWiz Logo" className="mx-auto" />
+            </Link>
+          </div>
+          {/* Heading */}
+          <h2 className="text-2xl font-bold text-center mb-2">Sign in</h2>
+          <p className="text-center text-gray-600 mb-6">with your TokenWiz Account</p>
+          {/* Login Form */}
+          <form action="#">
+            <div className="mb-4">
+              <input
+                type="email"
+                placeholder="Your Email"
+                className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            <div className="mb-4">
+              <input
+                type="password"
+                placeholder="Password"
+                className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            <div className="mb-4 flex justify-between items-center">
+              <div className="flex items-center">
+                <input
+                  type="checkbox"
+                  id="remember-me"
+                  className="mr-2"
+                />
+                <label htmlFor="remember-me" className="text-gray-700 text-sm">
+                  Remember Me
+                </label>
+              </div>
+              <div>
+                <Link to="/forgot" className="text-blue-600 hover:underline text-sm">
+                  Forgot password?
+                </Link>
+              </div>
+            </div>
+            <button
+              type="submit"
+              className="w-full py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+            >
+              Sign In
+            </button>
+          </form>
+          {/* Social Sign In */}
+          <div className="my-6 text-center text-gray-500">Or Sign In With</div>
+          <div className="flex space-x-4">
+            <a
+              href="#"
+              className="flex-1 py-3 border border-gray-300 rounded flex items-center justify-center hover:bg-gray-100 transition-colors"
+            >
+              <i className="fab fa-facebook-f mr-2"></i> Facebook
+            </a>
+            <a
+              href="#"
+              className="flex-1 py-3 border border-gray-300 rounded flex items-center justify-center hover:bg-gray-100 transition-colors"
+            >
+              <i className="fab fa-google mr-2"></i> Google
+            </a>
+          </div>
+          {/* Link to Register */}
+          <div className="mt-6 text-center text-sm text-gray-600">
+            Don’t have an account?{' '}
+            <Link to="/register" className="text-blue-600 hover:underline font-semibold">
+              Sign up here
+            </Link>
+          </div>
+        </div>
+        {/* Right Side - Graphic (visible on large screens) */}
+        <div className="hidden lg:flex lg:w-1/2 items-center justify-center bg-gray-50">
+          <img src="/images/ath-gfx.png" alt="Illustration" className="max-w-full h-auto" />
+        </div>
+      </div>
+      {/* Footer */}
+      <div className="mt-4">
+        <ul className="flex space-x-4 text-sm text-gray-500">
+          <li>
+            <Link to="/privacy-policy" className="hover:underline">
+              Privacy Policy
+            </Link>
+          </li>
+          <li>
+            <Link to="/terms" className="hover:underline">
+              Terms
+            </Link>
+          </li>
+          <li>© 2018 TokenWiz.</li>
+        </ul>
+      </div>
+    </div>
+  );
+};
 
-//   const loginUser = () => {
-//     setLoading(true);
-
-//     // Make the login API request
-//     axios
-//       .post("http://127.0.0.1:5000/login", { email, password })
-//       .then((response) => {
-//         setLoading(false);
-
-//         if (response.data.token) {
-//           // Store the JWT token and email in localStorage on successful login
-//           localStorage.setItem("token", response.data.token);
-//           localStorage.setItem("email", email);
-
-//           // Clear input fields
-//           setEmail("");
-//           setPassword("");
-
-//           // Navigate to the home page after successful login
-//           navigate("/home");
-
-//           // Reload the page to ensure fresh state
-//           window.location.reload();
-//         } else {
-//           setError("Invalid response from server");
-//         }
-//       })
-//       .catch((error) => {
-//         setLoading(false);
-//         setError("Invalid credentials, please try again");
-//       });
-//   };
-
-//   return (
-//     <div className="login-register-page relative flex justify-center items-center h-screen w-full">
-//       {/* Video Background */}
-//       <video
-//         className="background-video absolute top-0 left-0 w-full h-full object-cover"
-//         autoPlay
-//         loop
-//         muted
-//       >
-//         <source src="/backgroundvideo.mp4" type="video/mp4" />
-//         Your browser does not support the video tag.
-//       </video>
-
-//       {/* Overlay for dimming the background */}
-//       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-70"></div>
-
-//       {/* Form Container */}
-//       <div className="relative z-10 w-full max-w-md p-6 bg-black bg-opacity-60 rounded-lg shadow-lg">
-//         <div className="text-center">
-//           {/* Profile Icon */}
-//           <div className="profile-icon text-white text-5xl mb-4">
-//             <i className="bi bi-person-circle"></i>
-//           </div>
-//           <h2 className="text-white text-3xl mb-4">Login</h2>
-
-//           {/* Error Message */}
-//           {error && <p className="error-message text-red-500 mb-4">{error}</p>}
-
-//           {/* Email Input */}
-//           <div className="input-group mb-4">
-//             <input
-//               type="email"
-//               id="email"
-//               className="form-control w-full p-4 text-lg bg-gray-800 text-white rounded-md border-none focus:outline-none focus:ring-2 focus:ring-blue-500"
-//               placeholder="Enter email"
-//               value={email}
-//               onChange={(e) => setEmail(e.target.value)}
-//             />
-//           </div>
-
-//           {/* Password Input */}
-//           <div className="input-group mb-6">
-//             <input
-//               type="password"
-//               id="password"
-//               className="form-control w-full p-4 text-lg bg-gray-800 text-white rounded-md border-none focus:outline-none focus:ring-2 focus:ring-blue-500"
-//               placeholder="Enter password"
-//               value={password}
-//               onChange={(e) => setPassword(e.target.value)}
-//             />
-//           </div>
-
-//           {/* Submit Button */}
-//           <button
-//             onClick={loginUser}
-//             disabled={loading}
-//             className="btn-primary w-full p-4 bg-blue-600 text-white text-xl rounded-lg shadow-md disabled:bg-gray-500 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300"
-//           >
-//             {loading ? "Logging in..." : "Login"}
-//           </button>
-
-//           {/* Register Link */}
-//           <p className="text-center mt-4 text-white">
-//             Don't have an account?{" "}
-//             <a href="/register" className="text-blue-500 hover:text-blue-700">
-//               Register
-//             </a>
-//           </p>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
+export default Login;
