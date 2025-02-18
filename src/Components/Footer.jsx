@@ -22,7 +22,7 @@ const Footer = () => {
 
         {/* Right side content */}
         <div className="flex items-center space-x-4">
-          <span className="text-gray-600">© 2018 TokenWiz.</span>
+          <span className="text-gray-600">© 2018 PangeaPay.</span>
           
           {/* Language selector button */}
           <button className="flex items-center space-x-1 px-2 py-1 rounded border border-gray-300 hover:bg-gray-100 transition-colors">

@@ -11,8 +11,8 @@ const Login = () => {
     
 
         {/* Heading */}
-        <h2 className="text-2xl font-bold text-center mb-2">log in</h2>
-        <p className="text-center text-gray-600 mb-6">with your TokenWiz Account</p>
+        <h2 className="text-2xl font-bold text-center mb-2">Log in</h2>
+        <p className="text-center text-gray-600 mb-6">with your PangeaPay Account</p>
 
         {/* Login Form */}
         <form>
@@ -49,13 +49,13 @@ const Login = () => {
             type="submit"
             className="w-full py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
           >
-            log In
+            Log In
           </button>
           </Link>
         </form>
 
         {/* Or Sign In With */}
-        <div className="my-6 text-center text-gray-500">Or Sign In With</div>
+        <div className="my-6 text-center text-gray-500">Or Log In With</div>
         <div className="flex space-x-4">
           <a
             href="#"
@@ -92,7 +92,7 @@ const Login = () => {
                 Terms
               </Link>
             </li>
-            <li>© 2018 TokenWiz.</li>
+            <li>© 2018 PangeaPay.</li>
           </ul>
         </div>
       </div>

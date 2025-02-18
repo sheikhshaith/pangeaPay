@@ -12,7 +12,7 @@ const Register = () => {
 
         {/* Heading */}
         <h2 className="text-2xl font-bold text-center mb-2">Sign up</h2>
-        <p className="text-center text-gray-600 mb-6">Create New TokenWiz Account</p>
+        <p className="text-center text-gray-600 mb-6">Create New PangeaPay Account</p>
 
         {/* Registration Form */}
         <form>
@@ -111,7 +111,7 @@ const Register = () => {
                 Terms
               </Link>
             </li>
-            <li>© 2018 TokenWiz.</li>
+            <li>© 2018 PangeaPay.</li>
           </ul>
         </div>
       </div>
