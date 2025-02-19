@@ -827,7 +827,7 @@ const KycRegister = () => {
                     <div className="mt-6 flex justify-center">
                       <div className="w-full relative">
                         <img
-                          src="/image.png"
+                          src="/Image-1.jpg"
                           alt="Example ID card"
                           className="w-full rounded-lg shadow-md"
                         />
