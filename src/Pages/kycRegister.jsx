@@ -246,6 +246,176 @@ const KycRegister = () => {
                   required
                 />
               </div>
+              {/* <div>
+                <label className="block text-sm font-medium text-gray-600 mb-1">First Name*</label>
+                <input 
+                  type="text" 
+                  name="firstName" 
+                  value={formData.firstName} 
+                  onChange={handleInputChange} 
+                  className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-150" 
+                  required 
+                />
+              </div> */}
+              {/* Other personal details fields... */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Last Name <span className="text-red-500">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  name="lastName" 
+                  value={formData.lastName} 
+                  onChange={handleInputChange} 
+                  className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-150" 
+                  required 
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Email Address <span className="text-red-500">*</span>
+                </label>
+                <input 
+                  type="email" 
+                  name="email" 
+                  value={formData.email} 
+                  onChange={handleInputChange} 
+                  className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-150" 
+                  required 
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Phone Number <span className="text-red-500">*</span>
+                </label>
+                <input 
+                  type="tel" 
+                  name="phone" 
+                  value={formData.phone} 
+                  onChange={handleInputChange} 
+                  className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-150" 
+                  required 
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Date of Birth <span className="text-red-500">*</span>
+                </label>
+                <input 
+                  type="date" 
+                  name="dateOfBirth" 
+                  value={formData.dateOfBirth} 
+                  onChange={handleInputChange} 
+                  className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-150" 
+                  required 
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Telegram Username
+                </label>
+                <input 
+                  type="text" 
+                  name="telegram" 
+                  value={formData.telegram} 
+                  onChange={handleInputChange} 
+                  className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-150" 
+                />
+              </div>
+
+              <h3 className="text-lg font-medium text-blue-700 md:col-span-2 mt-4">Your Address</h3>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Address Line 1 <span className="text-red-500">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  name="addressLine1" 
+                  value={formData.addressLine1} 
+                  onChange={handleInputChange} 
+                  className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-150" 
+                  required 
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Address Line 2
+                </label>
+                <input 
+                  type="text" 
+                  name="addressLine2" 
+                  value={formData.addressLine2} 
+                  onChange={handleInputChange} 
+                  className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-150" 
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  City <span className="text-red-500">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  name="city" 
+                  value={formData.city} 
+                  onChange={handleInputChange} 
+                  className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-150" 
+                  required 
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  State <span className="text-red-500">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  name="state" 
+                  value={formData.state} 
+                  onChange={handleInputChange} 
+                  className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-150" 
+                  required 
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Nationality <span className="text-red-500">*</span>
+                </label>
+                <select 
+                  name="nationality" 
+                  value={formData.nationality} 
+                  onChange={handleInputChange} 
+                  className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-150"
+                  required
+                >
+                  <option value="United State">United State</option>
+                  <option value="United Kingdom">United Kingdom</option>
+                  <option value="Canada">Canada</option>
+                  <option value="Australia">Australia</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Zip Code <span className="text-red-500">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  name="zipCode" 
+                  value={formData.zipCode} 
+                  onChange={handleInputChange} 
+                  className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-150" 
+                  required 
+                />
+              </div>
+          
               {/* Add additional personal details fields as needed */}
             </div>
           </div>
@@ -482,15 +652,13 @@ const KycRegister = () => {
 
                 {/* Example ID Card Illustration */}
                 <div className="mt-6 flex justify-center">
-                  <div className="w-64 relative">
+                  <div className="w-full relative">
                     <img
-                      src="/api/placeholder/256/160"
+                      src="/image.png"
                       alt="Example ID card"
                       className="w-full rounded-lg shadow-md"
                     />
-                    <div className="absolute -bottom-2 left-0 right-0 text-center text-sm text-gray-500">
-                      Example {formData.selectedDocType.replace('_', ' ')}
-                    </div>
+                    
                   </div>
                 </div>
               </div>
