@@ -659,15 +659,13 @@ const KycRegister = () => {
               </div>
               {/* Example Credit Card Illustration */}
               <div className="mt-6 flex justify-center">
-                <div className="w-64 relative">
+                <div className="w-full  relative">
                   <img
-                    src="/api/placeholder/256/160"
+                    src="/ccc.png"
                     alt="Example credit card"
                     className="w-full rounded-lg shadow-md"
                   />
-                  <div className="absolute -bottom-2 left-0 right-0 text-center text-sm text-gray-500">
-                    Example card with covered details
-                  </div>
+              
                 </div>
               </div>
             </div>
@@ -724,23 +722,6 @@ const KycRegister = () => {
             )}
           </div>
 
-          {/* Wallet Section */}
-          <div className="border rounded-lg p-6">
-            <h2 className="text-xl font-semibold mb-4">Your Paying Wallet</h2>
-            <div className="mb-4">
-              <label className="block mb-1">Select Wallet</label>
-              <select 
-                name="walletType" 
-                value={formData.walletType} 
-                onChange={handleInputChange} 
-                className="p-2 border rounded"
-              >
-                <option value="ethereum">Ethereum</option>
-                <option value="bitcoin">Bitcoin</option>
-              </select>
-            </div>
-       
-          </div>
 
           {/* Terms and Submit */}
           <div className="space-y-4">
