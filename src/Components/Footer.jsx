@@ -22,21 +22,21 @@
 
 //         {/* Right side content */}
 //         <div className="flex items-center space-x-4">
-//           <span className="text-gray-600">© 2018 PangeaPay.</span>
-          
+//           <span className="text-gray-600">© 2024 PangeaPay.</span>
+
 //           {/* Language selector button */}
 //           <button className="flex items-center space-x-1 px-2 py-1 rounded border border-gray-300 hover:bg-gray-100 transition-colors">
 //             <span className="text-gray-600">EN</span>
-//             <svg 
-//               className="w-4 h-4 text-gray-600" 
-//               fill="none" 
-//               stroke="currentColor" 
+//             <svg
+//               className="w-4 h-4 text-gray-600"
+//               fill="none"
+//               stroke="currentColor"
 //               viewBox="0 0 24 24"
 //             >
-//               <path 
-//                 strokeLinecap="round" 
-//                 strokeLinejoin="round" 
-//                 strokeWidth={2} 
+//               <path
+//                 strokeLinecap="round"
+//                 strokeLinejoin="round"
+//                 strokeWidth={2}
 //                 d="M19 9l-7 7-7-7"
 //               />
 //             </svg>
@@ -49,25 +49,15 @@
 
 // export default Footer;
 
-
-
-
-
-
-
-
-
-
-
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Footer = () => {
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
 
   const languages = [
-    { code: 'EN', name: 'English' },
-    { code: 'ES', name: 'Spanish' },
-    { code: 'FR', name: 'French' },
+    { code: "EN", name: "English" },
+    { code: "ES", name: "Spanish" },
+    { code: "FR", name: "French" },
   ];
 
   return (
@@ -75,26 +65,26 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-center sm:justify-between space-y-4 sm:space-y-0">
         {/* Navigation links - Stack on mobile, row on desktop */}
         <nav className="flex flex-col sm:flex-row items-center sm:items-start space-y-3 sm:space-y-0 sm:space-x-6">
-          <a 
-            href="/whitepaper" 
+          <a
+            href="/whitepaper"
             className="text-gray-600 hover:text-gray-800 transition-colors text-sm md:text-base"
           >
             Whitepaper
           </a>
-          <a 
-            href="/faqs" 
+          <a
+            href="/faqs"
             className="text-gray-600 hover:text-gray-800 transition-colors text-sm md:text-base"
           >
             FAQs
           </a>
-          <a 
-            href="/privacy-policy" 
+          <a
+            href="/privacy-policy"
             className="text-gray-600 hover:text-gray-800 transition-colors text-sm md:text-base"
           >
             Privacy Policy
           </a>
-          <a 
-            href="/terms" 
+          <a
+            href="/terms"
             className="text-gray-600 hover:text-gray-800 transition-colors text-sm md:text-base"
           >
             Terms of Condition
@@ -104,28 +94,28 @@ const Footer = () => {
         {/* Right side content - Copyright and Language selector */}
         <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-4">
           <span className="text-gray-600 text-sm md:text-base order-2 sm:order-1">
-            © 2018 PangeaPay.
+            © 2024 PangeaPay.
           </span>
-          
+
           {/* Language selector dropdown */}
           <div className="relative order-1 sm:order-2">
-            <button 
+            <button
               className="flex items-center space-x-1 px-2 py-1 rounded border border-gray-300 hover:bg-gray-100 transition-colors"
               onClick={() => setIsLanguageDropdownOpen(!isLanguageDropdownOpen)}
             >
               <span className="text-gray-600 text-sm md:text-base">EN</span>
-              <svg 
+              <svg
                 className={`w-4 h-4 text-gray-600 transform transition-transform duration-200 ${
-                  isLanguageDropdownOpen ? 'rotate-180' : ''
+                  isLanguageDropdownOpen ? "rotate-180" : ""
                 }`}
-                fill="none" 
-                stroke="currentColor" 
+                fill="none"
+                stroke="currentColor"
                 viewBox="0 0 24 24"
               >
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth={2} 
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
                   d="M19 9l-7 7-7-7"
                 />
               </svg>
