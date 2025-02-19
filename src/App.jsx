@@ -1,7 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import Login from "./Pages/LoginPage";
-import RegisterPage from "./Pages/Register";
 import Home from "./Pages/Home";
 import KYC from "./Pages/KYCv";
 import KycRegister from "./Pages/kycRegister";
@@ -19,21 +17,18 @@ function ScrollToTop() {
   return null;
 }
 
+// Layout component wrapping Navbar, Routes, and Footer
 function Layout() {
-  const location = useLocation();
-  const hideNavbarAndFooter = ["/", "/register"].includes(location.pathname);
-
   return (
     <>
-      {!hideNavbarAndFooter && <Navbar />}
+      <Navbar />
       <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/register" element={<RegisterPage />} />
+      
         <Route path="/home" element={<Home />} />
-        <Route path="/kyc" element={<KYC />} />
+        <Route path="/" element={<KYC />} />
         <Route path="/kycRegister" element={<KycRegister />} />
       </Routes>
-      {!hideNavbarAndFooter && <Footer />}
+      <Footer />
     </>
   );
 }
