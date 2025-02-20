@@ -30,13 +30,13 @@ const ServiceCard = ({ image, icon: Icon, title, description }) => {
       >
         <div className="p-4">
           <div className="flex items-center gap-3">
-            <div className="bg-green-400 p-2 rounded-full">
+            <div className="bg-[#CF992D] p-2 rounded-full">
               <Icon size={24} className="text-slate-800" />
             </div>
             <h3 className="text-xl text-white font-semibold">{title}</h3>
             <ArrowUpRight
               size={20}
-              className="text-green-400 ml-auto transform transition-transform duration-300 group-hover:translate-x-1"
+              className="text-[#CF992D] ml-auto transform transition-transform duration-300 group-hover:translate-x-1"
             />
           </div>
           <div
@@ -45,7 +45,7 @@ const ServiceCard = ({ image, icon: Icon, title, description }) => {
             }`}
           >
             <p className="text-slate-200 mb-4 line-clamp-2">{description}</p>
-            <button className="text-green-400 flex items-center gap-2 hover:gap-3 transition-all duration-300">
+            <button className="text-[#CF992D] flex items-center gap-2 hover:gap-3 transition-all duration-300">
               Learn More
               <ArrowUpRight size={16} />
             </button>
@@ -63,48 +63,53 @@ const FinancialLanding = () => {
       description:
         "Comprehensive business consulting and strategic planning to help your company achieve sustainable growth and maximize market opportunities.",
       icon: Users,
-      image: "/api/placeholder/600/400",
+      image: "/5-43.jpg",
     },
     {
       title: "Taxes & Accounting",
       description:
         "Expert tax planning and accounting services to optimize your financial position and ensure compliance with all regulations.",
       icon: Calculator,
-      image: "/api/placeholder/600/400",
+      image: "/4-36.jpg",
     },
     {
       title: "Financial Planning",
       description:
         "Personalized financial planning services to secure your future and create a roadmap for wealth building and retirement.",
       icon: LineChart,
-      image: "/api/placeholder/600/400",
+      image: "/7-29.jpg",
     },
   ];
 
   return (
-    <div className="min-h-screen bg-white p-8">
+    <div className="min-h-screen bg-black p-8">
       {/* Header Section */}
-      <div className="mb-4">
-        <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">
-          Our Services
-        </span>
-      </div>
+      <div>
+        {/* Services Tag - Now on the left */}
+        <div className="flex justify-start mb-4">
+          <span className="bg-[#CF992D] text-black px-4 py-2 rounded-full text-sm font-medium">
+            Our Services
+          </span>
+        </div>
 
-      {/* Hero Section */}
-      <div className="max-w-6xl mx-auto mb-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div>
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
-              Financial Services To Grow And Secure Your Wealth
-            </h1>
-            <p className="text-slate-600 mb-8">
-              Expert financial guidance to help you achieve your financial goals
-              and secure your future prosperity.
-            </p>
-            <button className="bg-green-400 hover:bg-green-500 text-slate-800 px-6 py-3 rounded-full font-medium flex items-center gap-2 transition-all duration-300 hover:gap-3">
-              Learn More
-              <ArrowUpRight size={20} />
-            </button>
+        {/* Hero Section */}
+        <div className="max-w-6xl mx-auto mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Financial Services To Grow And Secure Your Wealth
+              </h1>
+            </div>
+            <div className="flex flex-col items-start md:items-end">
+              <p className="text-slate-300 mb-8 md:text-right">
+                Expert financial guidance to help you achieve your financial
+                goals and secure your future prosperity.
+              </p>
+              <button className="bg-[#CF992D] hover:bg-[#CF992D] text-black px-6 py-3 rounded-full font-medium flex items-center gap-2 transition-all duration-300 hover:gap-3 self-start md:self-end">
+                Learn More
+                <ArrowUpRight size={20} />
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -118,6 +123,7 @@ const FinancialLanding = () => {
     </div>
   );
 };
+
 //Testimonials
 const TestimonialSection = () => {
   const testimonials = [
@@ -126,30 +132,30 @@ const TestimonialSection = () => {
       designation: "Designation",
       content:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: "/api/placeholder/80/80",
+      image: "/T1.jpg",
     },
     {
       name: "Emilia Rose",
       designation: "Designation",
       content:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: "/api/placeholder/80/80",
+      image: "/T2.jpg",
     },
     {
       name: "Listy Nay",
       designation: "Designation",
       content:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: "/api/placeholder/80/80",
+      image: "/T3.jpg",
     },
   ];
 
   return (
-    <div className="w-full bg-[#29303A] py-16">
+    <div className="w-full bg-black py-16">
       <div className="max-w-full mx-auto px-8 md:px-16">
         <div className="flex flex-col gap-12">
           <div>
-            <span className="bg-lime-100 text-lime-800 px-4 py-1 rounded-full text-sm inline-block">
+            <span className="bg-[#CF992D] text-lime-800 px-4 py-1 rounded-full text-sm inline-block">
               Testimonial
             </span>
           </div>
@@ -163,7 +169,7 @@ const TestimonialSection = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
                 tellus, luctus nec ullamcorper mattis, pulvinar dapibus.
               </p>
-              <button className="mt-4 bg-lime-300 hover:bg-lime-400 text-gray-800 px-6 py-2 rounded-full font-medium flex items-center gap-2 transition-colors">
+              <button className="mt-4 bg-[#CF992D] hover:bg-opacity-90 transition-all text-gray-800 px-6 py-2 rounded-full font-medium flex items-center gap-2 transition-colors">
                 Learn More
                 <svg
                   className="w-4 h-4"
@@ -205,12 +211,12 @@ const TestimonialSection = () => {
                     className="w-14 h-14 rounded-full"
                   />
                   <div>
-                    <h4 className="text-lime-400 font-medium text-lg">
+                    <h4 className="text-white font-medium text-lg">
                       {testimonial.name}
                     </h4>
                     <p className="text-gray-400">{testimonial.designation}</p>
                   </div>
-                  <span className="ml-auto text-5xl text-white opacity-20 font-serif leading-none">
+                  <span className="ml-auto text-5xl text-white  font-serif leading-none">
                     "
                   </span>
                 </div>
