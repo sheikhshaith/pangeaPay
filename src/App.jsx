@@ -28,7 +28,7 @@ function Layout() {
     <>
       <Navbar />
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/kyc" element={<KYC />} />
         <Route path="/kycRegister" element={<KycRegister />} />
       </Routes>
