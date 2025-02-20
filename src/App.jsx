@@ -11,7 +11,6 @@ import KycRegister from "./Pages/kycRegister";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 
-// ScrollToTop component to handle scrolling on route change
 function ScrollToTop() {
   const { pathname } = useLocation();
 
