@@ -446,7 +446,7 @@ const Navbar = () => {
   const [isPagesOpen, setIsPagesOpen] = useState(false);
 
   return (
-    <nav className="bg-black py-4">
+    <nav className="bg-black py-4 px-6">
       <div className="container mx-auto px-8">
         <div className="flex items-center justify-between">
           {/* Brand Name */}
