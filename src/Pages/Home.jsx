@@ -1,18 +1,469 @@
-import React from "react";
+import React, { useState } from 'react';
+import { ArrowRight, CheckCircle,DollarSign,Plus, Minus, PiggyBank, Check, LineChart } from 'lucide-react';
 
-const Home = () => {
+
+const FAQSection = () => {
+  const [activeIndex, setActiveIndex] = useState(2); // Third item open by default
+
+  const faqs = [
+    {
+      question: "How To Change My Photo From Admin Dashboard?",
+      answer: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove"
+    },
+    {
+      question: "How To Change My Password Easily?",
+      answer: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove"
+    },
+    {
+      question: "How To Change My Subscription Plan Using PayPal",
+      answer: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove"
+    },
+    {
+      question: "How Can Consulting Improve Operational Efficiency?",
+      answer: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove"
+    }
+  ];
+
   return (
-    <div className="flex justify-center items-center min-h-screen bg-white text-gray-900 text-center p-4">
-      <div className="p-6 sm:p-8 md:p-12 bg-blue-800 rounded-xl shadow-2xl transform transition duration-500 hover:scale-105 animate-fadeIn w-full max-w-2xl mx-auto">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 sm:mb-6 text-white drop-shadow-md">
-          Welcome to PangeaPay
-        </h1>
-        <p className="text-base sm:text-lg md:text-xl text-white opacity-90 drop-shadow-md">
-          Your trusted global payment solution
-        </p>
+    <div className="bg-[#29303A] py-16">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          {/* FAQ List */}
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <div 
+                key={index}
+                className={`rounded-2xl transition-all duration-300 ${
+                  activeIndex === index ? 'bg-[#CF992D] bg-opacity-10' : 'bg-white bg-opacity-5'
+                }`}
+              >
+                <button
+                  className="w-full px-6 py-4 flex items-center justify-between text-left"
+                  onClick={() => setActiveIndex(activeIndex === index ? null : index)}
+                >
+                  <span className={`font-medium ${
+                    activeIndex === index ? 'text-[#CF992D]' : 'text-white'
+                  }`}>
+                    {faq.question}
+                  </span>
+                  <div className={`flex-shrink-0 ml-4 ${
+                    activeIndex === index ? 'text-[#CF992D]' : 'text-white'
+                  }`}>
+                    {activeIndex === index ? (
+                      <Minus className="w-5 h-5" />
+                    ) : (
+                      <Plus className="w-5 h-5" />
+                    )}
+                  </div>
+                </button>
+                {activeIndex === index && (
+                  <div className="px-6 pb-4 text-gray-400">
+                    {faq.answer}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Right Content */}
+          <div className="lg:pl-8">
+            <div className="mb-4">
+              <span className="inline-block px-4 py-2 rounded-full bg-[#CF992D] bg-opacity-10 text-[#CF992D]">
+                FAQ'S Corner
+              </span>
+            </div>
+            
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Frequently Asked Questions
+            </h2>
+            
+            <p className="text-gray-400 mb-8">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+            </p>
+
+            <button className="bg-[#CF992D] text-white px-8 py-4 rounded-xl hover:bg-opacity-90 transition-all font-medium">
+              Book Free Consultation
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+//FEATURES SECTION
+const FeaturesSection = () => {
+  const features = [
+    "Tailored Solutions",
+    "Expert Guidance",
+    "Innovative Strategies",
+    "Comprehensive Support",
+    "Commitment to Excellence",
+    "Strategic Partnerships"
+  ];
+
+  return (
+    <div className="bg-[#29303A] py-16">
+      <div className="container mx-auto px-4 md:px-6">
+        {/* Header Section */}
+        <div className="text-center mb-12">
+          <div className="inline-block px-6 py-2 mb-4">
+            <span className="text-[#CF992D] text-sm uppercase tracking-wider">
+              FEATURES THAT DRIVE SUCCESS
+            </span>
+          </div>
+          
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            Experience the Difference
+          </h2>
+          
+          <p className="text-gray-400 text-lg max-w-3xl mx-auto mb-16">
+            At PGI, we understand the challenges businesses face when it comes to managing resources
+            and planning for growth. Our expertise lies in creating custom financial strategies that align with
+            your unique business goals. Here's what sets us apart:
+          </p>
+
+          {/* Features Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {features.map((feature, index) => (
+              <div 
+                key={index}
+                className="bg-white bg-opacity-5 px-8 py-6 rounded-2xl flex items-center gap-4 group hover:bg-opacity-10 transition-all"
+              >
+                <div className="bg-[#CF992D] rounded-full p-1.5">
+                  <Check className="w-5 h-5 text-white" />
+                </div>
+                <span className="text-white text-lg font-medium">{feature}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA Button */}
+          <button className="bg-[#CF992D] text-white px-8 py-4 rounded-xl hover:bg-opacity-90 transition-all font-medium text-lg uppercase tracking-wide">
+            SEE SERVICES
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+//steps
+const StepsSection = () => {
+  return (
+    <div className="bg-[#29303A] py-16">
+      <div className="container mx-auto px-4 md:px-6">
+        {/* Header Section */}
+        <div className="text-center mb-12">
+          <div className="inline-block px-6 py-2 rounded-full bg-[#CF992D] bg-opacity-10 mb-4">
+            <span className="text-[#CF992D]">How We Work?</span>
+          </div>
+          <h2 className="text-4xl font-bold text-white mb-4">
+            4 Easy Steps To Achieve Your Goals
+          </h2>
+          <p className="text-gray-400 max-w-3xl mx-auto">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+          </p>
+        </div>
+
+        {/* Steps Grid - Now 3 columns */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Column 1 */}
+          <div className="space-y-6">
+            {/* Step 1 */}
+            <div className="bg-white bg-opacity-5 p-8 rounded-2xl hover:bg-opacity-10 transition-all">
+              <div className="text-6xl font-bold text-[#CF992D] opacity-20 mb-4">01</div>
+              <h3 className="text-xl font-bold text-white mb-3">Pre-Qualification</h3>
+              <p className="text-gray-400">
+                We have start by ensuring we're the right fit for your needs, saving time and aligning expectations from the beginning.
+              </p>
+            </div>
+
+            {/* Step 2 */}
+            <div className="bg-white bg-opacity-5 p-8 rounded-2xl hover:bg-opacity-10 transition-all">
+              <div className="text-6xl font-bold text-[#CF992D] opacity-20 mb-4">02</div>
+              <h3 className="text-xl font-bold text-white mb-3">Discovery Call</h3>
+              <p className="text-gray-400">
+                Next, we conduct a discovery call to gather all the necessary details and understand your specific goals and challenges.
+              </p>
+            </div>
+          </div>
+
+          {/* Column 2 */}
+          <div className="space-y-6">
+            {/* Step 3 */}
+            <div className="bg-white bg-opacity-5 p-8 rounded-2xl hover:bg-opacity-10 transition-all">
+              <div className="text-6xl font-bold text-[#CF992D] opacity-20 mb-4">03</div>
+              <h3 className="text-xl font-bold text-white mb-3">Onboarding</h3>
+              <p className="text-gray-400">
+                Once aligned, we guide you through a comprehensive onboarding process to collect all the information needed to proceed seamlessly.
+              </p>
+            </div>
+
+            {/* Step 4 */}
+            <div className="bg-white bg-opacity-5 p-8 rounded-2xl hover:bg-opacity-10 transition-all">
+              <div className="text-6xl font-bold text-[#CF992D] opacity-20 mb-4">04</div>
+              <h3 className="text-xl font-bold text-white mb-3">Initiation of Process</h3>
+              <p className="text-gray-400">
+                With everything in place, we kick off the process, implementing strategies and actionable steps tailored to your objectives.
+              </p>
+            </div>
+          </div>
+
+          {/* Column 3 */}
+          <div className="space-y-6">
+            {/* Step 5 */}
+            <div className="bg-white bg-opacity-5 p-8 rounded-2xl hover:bg-opacity-10 transition-all">
+              <div className="text-6xl font-bold text-[#CF992D] opacity-20 mb-4">05</div>
+              <h3 className="text-xl font-bold text-white mb-3">Ongoing Support and Updates</h3>
+              <p className="text-gray-400">
+                Our team will provide continuous guidance, support, and regular updates throughout the entire process to ensure smooth execution and progress.
+              </p>
+            </div>
+
+            {/* Step 6 */}
+            <div className="bg-white bg-opacity-5 p-8 rounded-2xl hover:bg-opacity-10 transition-all">
+              <div className="text-6xl font-bold text-[#CF992D] opacity-20 mb-4">06</div>
+              <h3 className="text-xl font-bold text-white mb-3">Customer Success Follow-Up</h3>
+              <p className="text-gray-400">
+                After implementation, our customer success team will follow up to ensure your satisfaction, address any concerns, and help you achieve sustained success.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Home;
+
+const AboutSection = () => {
+  return (
+    <div className="w-full bg-[#29303A] py-16">
+      <div className="container mx-auto px-6 lg:px-8">
+        {/* Main Content Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+          {/* Left Side - Image Container */}
+          <div className="relative rounded-2xl overflow-hidden group">
+            <img 
+              src="/api/placeholder/800/600" 
+              alt="Financial consultation" 
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            
+            {/* Notification Bar */}
+            <div className="absolute bottom-0 left-0 right-0 bg-[#29303A] p-4 transform transition-transform duration-300 group-hover:translate-y-0 translate-y-full">
+              <div className="flex items-center justify-between bg-[#29303A] rounded-xl p-4">
+                <div className="flex items-center gap-3 text-white">
+                  <CheckCircle className="text-[#CF992D] w-6 h-6" />
+                  <span>Join us to achieve sustainable growth and reach your financial goals with the right strategies.</span>
+                </div>
+                <button className="bg-[#CF992D] text-white px-6 py-2 rounded-full hover:bg-opacity-80 transition-all flex items-center gap-2 whitespace-nowrap">
+                  Learn More
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Side - Content */}
+          <div className="flex flex-col justify-center">
+            <div className="inline-block px-4 py-2 bg-[#CF992D] bg-opacity-10 rounded-full mb-4 transform transition-transform hover:scale-105">
+              <span className="text-[#CF992D]">Pangea Global Investments</span>
+            </div>
+
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 transition-colors hover:text-[#CF992D]">
+              Your Goto solution for Financial Leveraging
+            </h2>
+
+            <p className="text-gray-400 mb-8">
+              PGI helps you transform credit into opportunity, eliminating debt strategically, and driving capital growth. PGI empowers individuals and businesses with innovative financial solutions for lasting financial freedom.
+            </p>
+
+            <button className="inline-flex items-center bg-[#CF992D] text-white px-6 py-3 rounded-full hover:bg-opacity-90 transition-all w-fit hover:translate-x-2">
+              Learn More
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </button>
+          </div>
+        </div>
+
+        {/* Statistics Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Years of Experience */}
+          <div className="text-center lg:text-left group cursor-pointer">
+            <div className="flex items-baseline justify-center lg:justify-start gap-2 mb-3">
+              <span className="text-4xl lg:text-5xl font-bold text-white transition-transform group-hover:text-[#CF992D] duration-300">25</span>
+              <span className="text-[#CF992D] text-2xl font-bold group-hover:translate-x-1 transition-transform">+</span>
+            </div>
+            <p className="text-gray-400 group-hover:text-gray-300 transition-colors">Years of proven expertise in financial solutions</p>
+          </div>
+
+          {/* Clients Served */}
+          <div className="text-center lg:text-left group cursor-pointer">
+            <div className="flex items-baseline justify-center lg:justify-start gap-2 mb-3">
+              <span className="text-4xl lg:text-5xl font-bold text-white transition-transform group-hover:text-[#CF992D] duration-300">150K</span>
+              <span className="text-[#CF992D] text-2xl font-bold group-hover:translate-x-1 transition-transform">+</span>
+            </div>
+            <p className="text-gray-400 group-hover:text-gray-300 transition-colors">Clients successfully served worldwide</p>
+          </div>
+
+          {/* Success Rate */}
+          <div className="text-center lg:text-left group cursor-pointer">
+            <div className="flex items-baseline justify-center lg:justify-start gap-2 mb-3">
+              <span className="text-4xl lg:text-5xl font-bold text-white transition-transform group-hover:text-[#CF992D] duration-300">98%</span>
+            </div>
+            <p className="text-gray-400 group-hover:text-gray-300 transition-colors">Client satisfaction rate achieved</p>
+          </div>
+
+          {/* Capital Managed */}
+          <div className="text-center lg:text-left group cursor-pointer">
+            <div className="flex items-baseline justify-center lg:justify-start gap-2 mb-3">
+              <span className="text-4xl lg:text-5xl font-bold text-white transition-transform group-hover:text-[#CF992D] duration-300">$40M</span>
+              <span className="text-[#CF992D] text-2xl font-bold group-hover:translate-x-1 transition-transform">+</span>
+            </div>
+            <p className="text-gray-400 group-hover:text-gray-300 transition-colors">Total client benefits delivered</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+// SERVICES SECTION
+const ServicesSection = () => {
+  return (
+    <div className="w-full bg-[#29303A] py-16">
+      <div className="container mx-auto px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+          {/* How Does It Work? Section */}
+          <div className="relative overflow-hidden rounded-2xl">
+            <img 
+              src="/api/placeholder/800/600" 
+              alt="Business meeting" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-40 p-6 flex flex-col justify-end">
+              <h2 className="text-1xl font-bold text-white mb-4">PGI Financial Solutions</h2>
+              <button className="inline-flex items-center text-[#CF992D] font-medium">
+                <span>View All Services</span>
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </button>
+            </div>
+          </div>
+
+          {/* Service Cards */}
+          <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Credit Conversion Card */}
+            <div className="bg-[#29303A] p-6 rounded-2xl border border-gray-700">
+              <div className="bg-[#CF992D] p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <DollarSign className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Credit Conversion</h3>
+              <p className="text-gray-300">
+                Convert your credit into cash legally.
+              </p>
+            </div>
+
+            {/* Debt Discharge Card */}
+            <div className="bg-[#29303A] p-6 rounded-2xl border border-gray-700">
+              <div className="bg-[#CF992D] p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <PiggyBank className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Debt Discharge</h3>
+              <p className="text-gray-300">
+                Reduce or eliminate personal debts.
+              </p>
+            </div>
+
+            {/* Financial Consulting Card */}
+            <div className="bg-[#29303A] p-6 rounded-2xl border border-gray-700">
+              <div className="bg-[#CF992D] p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                <LineChart className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Financial Consulting</h3>
+              <p className="text-gray-300">
+                Tailored strategies to rebuild wealth.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+const HeroSection = () => {
+  return (
+    <div className="bg-[#29303A] py-16">
+      <div className="container mx-auto px-4 md:px-6">
+        {/* Header */}
+        <div className="inline-block px-6 py-2 rounded-full border border-[#CF992D] mb-12">
+          <span className="text-[#CF992D] text-base">Capital Growth Strategy</span>
+        </div>
+
+        {/* Main Content */}
+        <div>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+            Individuals & Business
+            solutions
+          </h1>
+
+          <p className="text-gray-300 text-lg mb-10 max-w-2xl">
+            PGI helps you legally convert credit and discharge personal debt with expert financial strategies.
+          </p>
+
+          {/* Action Buttons */}
+          <div className="flex flex-wrap gap-4 mb-16">
+            <button className="bg-[#CF992D] text-white px-8 py-4 rounded-xl flex items-center gap-2 hover:bg-opacity-90 transition-all text-lg">
+              Get Free Consultation
+              <span>→</span>
+            </button>
+            
+            <button className="bg-[#CF992D] text-white px-8 py-4 rounded-xl flex items-center gap-2 hover:bg-opacity-90 transition-all text-lg">
+              View Our Services
+              <span>→</span>
+            </button>
+          </div>
+
+          {/* Bottom Section with Rating and Team */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            {/* Rating Section */}
+            <div className="flex items-center gap-6">
+              <div className="flex gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-6 h-6 text-[#CF992D]" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-white">4.5</div>
+                <div className="text-gray-300">Positive Reviews From Our Customer</div>
+              </div>
+            </div>
+
+            {/* Team Section */}
+            <div className="flex items-center justify-end gap-4">
+              <span className="text-white">Join Our Team Now:</span>
+              <div className="flex -space-x-4">
+                <img src="/api/placeholder/50/50" alt="Team member" className="w-12 h-12 rounded-full border-2 border-white" />
+                <img src="/api/placeholder/50/50" alt="Team member" className="w-12 h-12 rounded-full border-2 border-white" />
+                <img src="/api/placeholder/50/50" alt="Team member" className="w-12 h-12 rounded-full border-2 border-white" />
+                <button className="w-12 h-12 rounded-full bg-white flex items-center justify-center hover:bg-gray-100 transition-all">
+                  <Plus className="w-6 h-6 text-[#29303A]" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ServicesSection />
+      <AboutSection />
+      <StepsSection />
+      <FeaturesSection />
+      <FAQSection />
+    </div>
+  );
+};
+
+export default HeroSection;
