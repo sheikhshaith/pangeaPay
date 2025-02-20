@@ -527,7 +527,7 @@ const Navbar = () => {
         {isOpen && (
           <div className="md:hidden mt-4">
             <div className="rounded-lg border border-[#CF992D]/20 p-4 bg-[#29303A]/50">
-              <Link to="/" className="block py-2 text-[#CF992D]">
+              <Link to="home" className="block py-2 text-[#CF992D]">
                 Home
               </Link>
               <Link to="/about" className="block py-2 text-[#C9C9C9] hover:text-[#CF992D]">
