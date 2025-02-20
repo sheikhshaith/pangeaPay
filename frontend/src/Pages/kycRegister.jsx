@@ -1,6 +1,3 @@
-
-
-
 import React, { useState, useRef } from 'react';
 import { Upload, Video, Camera, FileText } from 'lucide-react';
 
