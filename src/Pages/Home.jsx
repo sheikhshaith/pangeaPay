@@ -82,18 +82,18 @@ const FinancialLanding = () => {
       </div>
 
       {/* Hero Section */}
-      <div className="max-w-6xl mx-auto mb-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div className="max-w-6xl  mx-auto mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Financial Services To Grow And Secure Your Wealth
             </h1>
           </div>
-          <div className="flex flex-col items-start md:items-end">
-            <p className="text-slate-300 mb-8 md:text-right">
+          <div className="flex flex-col items-center">
+            <p className="text-slate-300 mb-8 md:text-left">
               Expert financial guidance to help you achieve your financial goals and secure your future prosperity.
             </p>
-            <button className="bg-[#CF992D] hover:bg-[#CF992D] text-black px-6 py-3 rounded-full font-medium flex items-center gap-2 transition-all duration-300 hover:gap-3 self-start md:self-end">
+            <button className="bg-[#CF992D] hover:bg-[#CF992D] text-black px-6 py-3 rounded-full font-medium flex items-center gap-2 transition-all duration-300 hover:gap-3 self-start">
               Learn More
               <ArrowUpRight size={20} />
             </button>
@@ -141,13 +141,13 @@ const TestimonialSection = () => {
       <div className="max-w-full mx-auto px-8 md:px-16">
         <div className="flex flex-col gap-12">
           <div>
-            <span className="bg-[#CF992D] text-lime-800 px-4 py-1 rounded-full text-sm inline-block">
+            <span className="bg-[#CF992D] text-black px-4 py-1 rounded-full text-sm inline-block">
               Testimonial
             </span>
           </div>
 
           <div className="flex justify-between items-start">
-            <h2 className="text-6xl font-bold text-gray-300 max-w-2xl">
+            <h2 className="text-6xl font-bold text-white max-w-2xl">
               Positive Reviews From Our Clients
             </h2>
             <div className="max-w-xl">
@@ -212,20 +212,28 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question: "How To Change My Photo From Admin Dashboard?",
-      answer: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove"
+      question: "What services does MFC offer?",
+      answer: "We provide a range of financial solutions designed to address your specific needs, including capital conversion services, credit utilization optimization, credit risk assessments, and credit management solutions. In addition we also offer partner collaboration opportunities, business development support, joint venture facilitation, and process automation for our partners."
     },
     {
-      question: "How To Change My Password Easily?",
-      answer: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove"
+      question: "How can MFC help businesses improve cash flow?",
+      answer: "Our cash flow optimization strategies are tailored to your specific challenges. We evaluate liquidity and solvency, analyze cash flow, and implement expense management plans. By identifying inefficiencies and streamlining key processes, we ensure your business has the cash resources needed to grow sustainably."
     },
     {
-      question: "How To Change My Subscription Plan Using PayPal",
-      answer: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove"
+      question: "What industries does Mondy Friend Capital work with?",
+      answer: "Our expertise spans various industries, including technology, retail, hospitality, professional services, and more. We offer individualized strategies to ensure alignment with your business model, goals, and industry dynamics."
     },
     {
-      question: "How Can Consulting Improve Operational Efficiency?",
-      answer: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove"
+      question: "How does the MFC process work?",
+      answer: "Our streamlined process ensures clarity and effectiveness: Initial Consultation: We'll assess your objectives, challenges, and potential opportunities. Strategic Planning: Develop a plan to optimize your cash flow and secure necessary resources.Implementation Support: Execute strategies with our expert team’s continuous guidance. Monitoring & Optimization: Regular reviews of performance metrics to adjust and maintain success."
+    },
+    {
+      question: "Can MFC help with accessing capital for startups?",
+      answer: "Yes, we specialize in helping startups and small businesses optimize their capital. We tailor our approach to meet your unique needs and set you up for long-term growth."
+    },
+    {
+      question: "Does MFC provide partnership opportunities?",
+      answer: "Absolutely. Our partner program enhances resources and creates new growth opportunities for collaborators. Benefits include joint ventures, co-branded initiatives, business development support, and access to automation tools that improve efficiency."
     }
   ];
 
@@ -282,8 +290,8 @@ const FAQSection = () => {
             <p className="text-gray-400 mb-8">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
             </p>
-
-            <button className="bg-[#CF992D] text-white px-8 py-4 rounded-xl hover:bg-opacity-90 transition-all font-medium">
+            <img src="/Faq.jpg" alt="FAQ" className="w-full  rounded-xl" />
+            <button className="bg-[#CF992D] text-white mt-2 px-8 py-4 rounded-xl hover:bg-opacity-90 transition-all font-medium">
               Book Free Consultation
             </button>
           </div>

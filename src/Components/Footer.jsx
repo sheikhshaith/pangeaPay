@@ -111,10 +111,10 @@ const Footer = () => {
   return (
     <div className="w-full relative">
       {/* Newsletter Section */}
-      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/4 z-10">
+      {/* <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/4 z-10">
         <div className="bg-[#CF992D] p-6 rounded-lg shadow-lg">
           <div className="container mx-auto flex items-center justify-between gap-24">
-            {/* Title */}
+            {/* Title 
             <div className="max-w-md">
               <h2 className="text-2xl md:text-3xl font-bold text-black">
                 Subscribe To Our
@@ -123,9 +123,9 @@ const Footer = () => {
               </h2>
             </div>
 
-            {/* Features and Input Group */}
+            {/* Features and Input Group 
             <div className="flex flex-col items-end gap-4 flex-1 max-w-2xl">
-              {/* Features */}
+              {/* Features *
               <div className="flex items-center justify-end gap-8 w-full">
                 <div className="flex items-center gap-2">
                   <div className="w-5 h-5 rounded-full bg-black flex items-center justify-center">
@@ -145,7 +145,7 @@ const Footer = () => {
                 </div>
               </div>
 
-              {/* Email Input Group */}
+              {/* Email Input Group *
               <div className="flex w-full gap-2">
                 <input
                   type="email"
@@ -159,7 +159,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Main Footer */}
       <footer className="bg-black text-white pt-32 pb-12 relative z-0">
