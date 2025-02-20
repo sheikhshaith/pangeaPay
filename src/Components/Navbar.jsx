@@ -459,7 +459,7 @@ const Navbar = () => {
           {/* Navigation Container with Border */}
           <div className="hidden md:flex items-center justify-between bg-[#29303A]/50 border border-[#CF992D]/20 rounded-full px-8 py-2">
             <div className="flex items-center space-x-8">
-              <Link to="/home" className="text-white hover:text-[#CF992D]/90">
+              <Link to="/" className="text-white hover:text-[#CF992D]/90">
                 Home
               </Link>
               <Link to="/about" className="text-white hover:text-[#CF992D]">

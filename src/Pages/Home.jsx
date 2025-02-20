@@ -113,28 +113,28 @@ const TestimonialSection = () => {
       name: "Juliana Silva",
       designation: "Designation",
       content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: "/api/placeholder/80/80"
+      image: "/T1.jpg"
     },
     {
       name: "Emilia Rose",
       designation: "Designation",
       content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: "/api/placeholder/80/80"
+      image: "/T2.jpg"
     },
     {
       name: "Listy Nay",
       designation: "Designation",
       content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      image: "/api/placeholder/80/80"
+      image: "/T3.jpg"
     }
   ];
 
   return (
-    <div className="w-full bg-[#29303A] py-16">
+    <div className="w-full bg-black py-16">
       <div className="max-w-full mx-auto px-8 md:px-16">
         <div className="flex flex-col gap-12">
           <div>
-            <span className="bg-lime-100 text-lime-800 px-4 py-1 rounded-full text-sm inline-block">
+            <span className="bg-[#CF992D] text-lime-800 px-4 py-1 rounded-full text-sm inline-block">
               Testimonial
             </span>
           </div>
@@ -147,7 +147,7 @@ const TestimonialSection = () => {
               <p className="text-gray-300">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus.
               </p>
-              <button className="mt-4 bg-lime-300 hover:bg-lime-400 text-gray-800 px-6 py-2 rounded-full font-medium flex items-center gap-2 transition-colors">
+              <button className="mt-4 bg-[#CF992D] hover:bg-opacity-90 transition-all text-gray-800 px-6 py-2 rounded-full font-medium flex items-center gap-2 transition-colors">
                 Learn More
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
@@ -179,14 +179,14 @@ const TestimonialSection = () => {
                     className="w-14 h-14 rounded-full"
                   />
                   <div>
-                    <h4 className="text-lime-400 font-medium text-lg">
+                    <h4 className="text-white font-medium text-lg">
                       {testimonial.name}
                     </h4>
                     <p className="text-gray-400">
                       {testimonial.designation}
                     </p>
                   </div>
-                  <span className="ml-auto text-5xl text-white opacity-20 font-serif leading-none">
+                  <span className="ml-auto text-5xl text-white  font-serif leading-none">
                     "
                   </span>
                 </div>
