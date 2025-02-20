@@ -25,7 +25,7 @@ function Layout() {
       <Routes>
       
         <Route path="/home" element={<Home />} />
-        <Route path="/" element={<KYC />} />
+        <Route path="/kyc" element={<KYC />} />
         <Route path="/kycRegister" element={<KycRegister />} />
       </Routes>
       <Footer />
