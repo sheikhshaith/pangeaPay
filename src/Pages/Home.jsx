@@ -26,18 +26,18 @@ const ServiceCard = ({ image, icon: Icon, title, description }) => {
       >
         <div className="p-4">
           <div className="flex items-center gap-3">
-            <div className="bg-green-400 p-2 rounded-full">
+            <div className="bg-[#CF992D] p-2 rounded-full">
               <Icon size={24} className="text-slate-800" />
             </div>
             <h3 className="text-xl text-white font-semibold">{title}</h3>
             <ArrowUpRight 
               size={20} 
-              className="text-green-400 ml-auto transform transition-transform duration-300 group-hover:translate-x-1" 
+              className="text-[#CF992D] ml-auto transform transition-transform duration-300 group-hover:translate-x-1" 
             />
           </div>
           <div className={`transition-opacity duration-300 mt-4 ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
             <p className="text-slate-200 mb-4 line-clamp-2">{description}</p>
-            <button className="text-green-400 flex items-center gap-2 hover:gap-3 transition-all duration-300">
+            <button className="text-[#CF992D] flex items-center gap-2 hover:gap-3 transition-all duration-300">
               Learn More
               <ArrowUpRight size={16} />
             </button>
@@ -54,27 +54,29 @@ const FinancialLanding = () => {
       title: "Business Strategies",
       description: "Comprehensive business consulting and strategic planning to help your company achieve sustainable growth and maximize market opportunities.",
       icon: Users,
-      image: "/api/placeholder/600/400"
+      image: "/5-43.jpg"
     },
     {
       title: "Taxes & Accounting",
       description: "Expert tax planning and accounting services to optimize your financial position and ensure compliance with all regulations.",
       icon: Calculator,
-      image: "/api/placeholder/600/400"
+      image: "/4-36.jpg"
     },
     {
       title: "Financial Planning",
       description: "Personalized financial planning services to secure your future and create a roadmap for wealth building and retirement.",
       icon: LineChart,
-      image: "/api/placeholder/600/400"
+      image: "/7-29.jpg"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-white p-8">
+    <div className="min-h-screen bg-black p-8">
       {/* Header Section */}
-      <div className="mb-4">
-        <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">
+      <div>
+      {/* Services Tag - Now on the left */}
+      <div className="flex justify-start mb-4">
+        <span className="bg-[#CF992D] text-black px-4 py-2 rounded-full text-sm font-medium">
           Our Services
         </span>
       </div>
@@ -83,19 +85,22 @@ const FinancialLanding = () => {
       <div className="max-w-6xl mx-auto mb-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Financial Services To Grow And Secure Your Wealth
             </h1>
-            <p className="text-slate-600 mb-8">
+          </div>
+          <div className="flex flex-col items-start md:items-end">
+            <p className="text-slate-300 mb-8 md:text-right">
               Expert financial guidance to help you achieve your financial goals and secure your future prosperity.
             </p>
-            <button className="bg-green-400 hover:bg-green-500 text-slate-800 px-6 py-3 rounded-full font-medium flex items-center gap-2 transition-all duration-300 hover:gap-3">
+            <button className="bg-[#CF992D] hover:bg-[#CF992D] text-black px-6 py-3 rounded-full font-medium flex items-center gap-2 transition-all duration-300 hover:gap-3 self-start md:self-end">
               Learn More
               <ArrowUpRight size={20} />
             </button>
           </div>
         </div>
       </div>
+    </div>
 
       {/* Services Grid */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -106,6 +111,8 @@ const FinancialLanding = () => {
     </div>
   );
 };
+
+
 //Testimonials
 const TestimonialSection = () => {
   const testimonials = [
@@ -130,7 +137,7 @@ const TestimonialSection = () => {
   ];
 
   return (
-    <div className="w-full bg-[#29303A] py-16">
+    <div className="w-full bg-black py-16">
       <div className="max-w-full mx-auto px-8 md:px-16">
         <div className="flex flex-col gap-12">
           <div>
