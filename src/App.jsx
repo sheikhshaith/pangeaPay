@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import { useEffect } from "react";
 import Home from "./Pages/Home";
 import KYC from "./Pages/KYCv";
@@ -23,7 +28,6 @@ function Layout() {
     <>
       <Navbar />
       <Routes>
-      
         <Route path="/home" element={<Home />} />
         <Route path="/kyc" element={<KYC />} />
         <Route path="/kycRegister" element={<KycRegister />} />
